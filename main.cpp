@@ -27,32 +27,36 @@ int main() {
 
 
 
-		if (command == "commands") {
-			Commands();
-			ClearConsole();
-		}
-		else if (command == "1") {
-			Addition();
-			ClearConsole();
-		}
-		else if (command == "2") {
-			Subtraction();
-			ClearConsole();
-		}
-		else if (command == "3") {
-			Multiplication();
-			ClearConsole();
-		}else if(command == "4") {
-			Division();
-			ClearConsole();
-		}
-		else if (command == "exit") {
-			Exit();
-			ClearConsole();
-			break;
-		}
-		else {
-			cout << "Invalid command. Type 'commands' to see available options.\n";
-		}
+	        if (command == "commands") {
+	            Commands();
+	            ClearConsole();
+	        }
+	        else if (command == "exit") {
+	            Exit();
+	            ClearConsole();
+	            break;
+	        }
+	
+	        switch (std::stoi(command)) {
+	        case 1:
+	            Addition();
+	            ClearConsole();
+	            break;
+	        case 2:
+	            Subtraction();
+	            ClearConsole();
+	            break;
+	        case 3:
+	            Multiplication();
+	            ClearConsole();
+	            break;
+	        case 4:
+	            Division();
+	            ClearConsole();
+	            break;
+	        default:
+	            cout << "Invalid command. Type 'commands' to see available options.\n";
+	            break;
+	        }
 	}
 }
