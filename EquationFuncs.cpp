@@ -48,7 +48,7 @@ void Multiplication() {
 
 void Division() {
 
-    int a, b, answer{};
+    double a, b, answer{};
 
     std::cout << "Enter Number 1: ";
     std::cin >> a;
